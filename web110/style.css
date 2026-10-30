@@ -1,0 +1,21 @@
+body {
+    background-color: #dfe8da;
+    font-family: "Segoe UI", Arial, sans-serif;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #3e6680;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #2f3a33;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
