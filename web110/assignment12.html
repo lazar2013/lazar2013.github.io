@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 12</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <h1 id="name"></h1>
+
+    <h2>Current Date and Time</h2>
+    <p id="currentDateTime"></p>
+
+    <h2>Name on Canvas</h2>
+    <canvas id="nameCanvas" width="400" height="100" style="border:1px solid #3e6680;">
+        Your browser does not support the HTML canvas tag.
+    </canvas>
+
+    <h2>Circle on Canvas</h2>
+    <canvas id="circleCanvas" width="400" height="100" style="border:1px solid #3e6680;">
+        Your browser does not support the HTML canvas tag.
+    </canvas>
+
+    <h2>Assignment 12 Summary</h2>
+    <p>In this session I was able to play around with JavaScript a little
+        bit more. So far in the semester, I have been introduced to HTML to
+        help build a web page and CSS to play around with fonts and backgrounds
+        as well as adding photos, video, audio and YouTube links. By working
+        through this session's activities, I was able to see how JavaScript
+        helps make my web page more interactive instead of just a page to
+        scroll through. This week I was able to put my name in a heading
+        and to show the current date and time. The date and time adjust
+        automatically based on the time zone of whoever is viewing the
+        page, so the visitor will see their time and not mine. I also
+        learned that each part of a web page can have an id, and that is
+        how JavaScript knows which element it needs to find and edit. I'm
+        still new to using JavaScript, but this lesson gave me a beginner's
+        understanding of it. I enjoyed trying out buttons that change text
+        when you click them. In an IT position, understanding how to read a
+        script would help with troubleshooting errors or figuring out why
+        things aren't showing up.</p>
+
+    <script>
+        // Put my name in the heading
+        document.getElementById('name').textContent = 'Lazar Georgiev';
+
+        // Display the current date and time
+        const currentDateTimeElement = document.getElementById('currentDateTime');
+        const now = new Date();
+        currentDateTimeElement.textContent = now.toLocaleString();
+
+        // Display the name on the canvas
+        const nameCanvas = document.getElementById('nameCanvas');
+        const ctx = nameCanvas.getContext('2d');
+        ctx.font = '30px Arial';
+        ctx.fillText('Lazar Georgiev', 10, 50);
+
+        // Display the circle on the canvas
+        const circleCanvas = document.getElementById('circleCanvas');
+        const shapeCtx = circleCanvas.getContext('2d');
+        shapeCtx.beginPath();
+        shapeCtx.fillStyle = 'lightblue';
+        shapeCtx.arc(200, 50, 40, 0, 2 * Math.PI);
+        shapeCtx.fill();
+    </script>
+</body>
+
+</html>
